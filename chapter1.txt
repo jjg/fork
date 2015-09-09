@@ -1,0 +1,19 @@
+       fork()  creates  a new process by duplicating the calling process.  The
+       new process, referred to as the child, is an  exact  duplicate  of  the
+       calling  process,  referred  to as the parent, except for the following
+       points...
+
+
+Where to begin?
+
+Around 2000(?) it occured to me that it would be possible to make a rather clever email autoresponder that used the archive of corespondence of your Gmail account to respond intelligently to emails when you were away; a sort of expert system auto-responder without the training.  This came to mind after hearing about how someone had an email conversation with a friend's out of office autoresponder that went on for a number of messages.  I figured if just a dumb autoresponder was enough to keep someone talking, then one that did some basic datamining from the archive could not only be entertaining, but with sufficient corpus (after all, how many gigabytes of emails do you have in *your* Gmail archive?) it might be downright useful.
+
+I never went anywhere with this idea at the time, but a few years later, after the rise of social networking the idea came to mind again, but this time there was so much more data to draw from, and not just messages but intricate graphs of connections and conversations that could be drawn upon, all with public API's that could be used by a clever program to respond not only like a parrot, but perhaps with a little clever coding, to actually construct meaningful replies, and even extropolate on paths not previously taken before.
+
+My first practical experiments were in the form of a "Twitterbot".  Cleverly named "jasonbot3000", it started out a little more than an "Eliza" program, responding to other Twitter users who engaged it directly (in most cases, me).  This was fun but didn't really do much unless provoked, and like any other Eliza program it quickly revealed it's limited nature.  To improve on this, jasonbot4000 used a random timer and a database of RSS feeds to post a selection of links on timely articles in addition to responding to queries.  This made it appear a bit more real, and by initiating conversations it was able to initiate conversations with others.  Later jasonbot4000 was augmented with the ability to understand some basic commands which altered an internal state machine, allowing conversations with more than one person to appear more realistic.
+
+As fun as this simple bots were to write, they beging to scratch the surface of what I had imagined implementing.  The Twitter experiments did however illuminate some possibilities that went beyond what I imagined in the context of email.  On Twitter, it's possible to "crawl" the network, so when someone would respond to one of jasonbot4000's random tweets, the bot could examine the list of people that user follows, and in turn build a profile of that person's recent activity, interests, etc.  This allows the sort of "mining" I envisioned for the email responder possible not only for the person the bot is simulating, but for anyone who interacts with it as well.  This sort of "cloning" inspired the idea of a more dynamic implementation, one that not only could substitute for one person who granted permission to their Gmail archive, but a program that could, to a limited degree, replicate any user on the network.
+
+As exciting as this idea was, it was more ambitious than I could justify at the time so it was set aside and I didn't think too much about the whole thing for a long time.  It wasn't until recent events, that made me more aware of my own mortality and the mortality of others that I received the motivation to resume the work.
+
+
